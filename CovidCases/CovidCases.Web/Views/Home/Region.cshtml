@@ -13,9 +13,22 @@
                             <div class="ibox-title">
                                 <h5>Top 10 Covid Cases in @Model.Info.FirstOrDefault().Region.Name</h5>
                                 <div class="ibox-tools">
-                                    <a class="collapse-link">
-                                        <i class="fa fa-chevron-up"></i>
-                                    </a>
+                                    <form name="form1" asp-antiforgery="true" class="m-t" role="form" asp-action="" method="post" runat="server">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-sm-6">&nbsp;</div>
+                                                <div class="col-sm-2">
+                                                    <button class="btn btn-primary btn-block" type="submit" value="Csv" formaction="@Url.Action("Csv")">Csv</button>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button class="btn btn-primary btn-block" type="submit" value="Xml" formaction="@Url.Action("Xml")">Xml</button>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <button class="btn btn-primary btn-block" type="submit" value="Json" formaction="@Url.Action("Json")">Json</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="ibox-content">
