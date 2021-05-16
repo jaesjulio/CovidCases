@@ -52,10 +52,10 @@ namespace CovidCases.Controllers
             return View(model);
         }
 
-        public async Task<IActionResult> Csv([ModelBinder] HomeViewModel result)
+        public async Task<IActionResult> Csv(string Country)
         {
 
-            var resultlist = await _reportService.CovidInfoRequest();
+            var resultlist = await _reportService.CovidInfoRequest(Country);
 
             var builder = new StringBuilder();
             builder.AppendLine("Region,Cases,Deaths");
@@ -67,10 +67,10 @@ namespace CovidCases.Controllers
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/csv", "CovidCases.csv");
         }
 
-        public async Task<IActionResult> Xml([ModelBinder] HomeViewModel result)
+        public async Task<IActionResult> Xml(string Country)
         {
 
-            var resultlist = await _reportService.CovidInfoRequest();
+            var resultlist = await _reportService.CovidInfoRequest(Country);
 
             var builder = new StringBuilder();
             builder.AppendLine("Region,Cases,Deaths");
@@ -82,7 +82,7 @@ namespace CovidCases.Controllers
             return File(Encoding.UTF8.GetBytes(builder.ToString()), "text/xml", "CovidCases.xml");
         }
 
-        public async Task<IActionResult> Json([ModelBinder] HomeViewModel result)
+        public async Task<IActionResult> Json(string Country)
         {
 
             var resultlist = await _reportService.CovidInfoRequest();
