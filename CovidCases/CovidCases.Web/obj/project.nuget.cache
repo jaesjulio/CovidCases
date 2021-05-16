@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "C2Qv+DTvBnjMg0LGYdUc5e6MjQb+iONrmgeA0Ht7hKJzbQ2WKWLOhgYhzVLf2hFY/Rx1N0MnEzVF5U2ZyeZu5w==",
+  "success": true,
+  "projectFilePath": "C:\\code\\CovidCases\\CovidCases\\CovidCases.Web\\CovidCases.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jaesj\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
